@@ -2,7 +2,7 @@ apiVersion: skaffold/v1beta2
 kind: Config
 build:
   artifacts:
-  - image: hirodevops05/app
+  - image: hattorihrd/node-app
     context: .
     docker: {}
   tagPolicy:
@@ -23,7 +23,7 @@ profiles:
   deploy:
     helm:
       releases:
-      - name: jsapp
+      - name: node-app
         chartPath: charts/jsapp
         setValueTemplates:
           image.repository: '{{.DOCKER_REGISTRY}}/{{.IMAGE_NAME}}'

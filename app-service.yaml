@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: app
+  name: node-app
   labels:
-    app: app
+    app: node-app
 spec:
   # comment or delete the following line if you want to use a LoadBalancer
   type: LoadBalancer
@@ -14,4 +14,4 @@ spec:
   - port: 80
     targetPort: 8080
   selector:
-    app: app
+    app: node-app
