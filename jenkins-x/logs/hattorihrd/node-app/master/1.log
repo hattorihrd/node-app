@@ -1,0 +1,115 @@
+
+Showing logs for build [32mhattorihrd-node-app-master-66479-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1606587297.6016343,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mhattorihrd-node-app-master-66479-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mhattorihrd-node-app-master-66479-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mhattorihrd-node-app-master-66479-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-hattorihrd-node-app-master-66479-f6p6v[0m
+{"level":"info","ts":1606587335.5887737,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/**********/node-app.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1606587335.5910163,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1606587335.6655605,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mhattorihrd-node-app-master-66479-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mhattorihrd-node-app-master-66479-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mhattorihrd-node-app-master-66479-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mhattorihrd-node-app-master-66479-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mhattorihrd-node-app-master-66479-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+up to date in 0.312s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mhattorihrd-node-app-master-66479-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+
+Showing logs for build [32mhattorihrd-node-app-master-66479-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E1128 18:15:44.400718      11 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+E1128 18:15:45.006657      11 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E1128 18:15:45.010034      11 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0003] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0005] Built cross stage deps: map[]                
+[36mINFO[0m[0005] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0006] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0008] Executing 0 build triggers                   
+[36mINFO[0m[0008] cmd: EXPOSE                                  
+[36mINFO[0m[0008] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0008] Checking for cached layer gcr.io/nttd-platformtec/cache:acefa5e9060de9f43222acd9053001bda31ece1bdd20d44f92b045d4a91c8f2b... 
+[36mINFO[0m[0009] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0009] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0015] ENV PORT 8080                                
+[36mINFO[0m[0015] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0015] EXPOSE 8080                                  
+[36mINFO[0m[0015] cmd: EXPOSE                                  
+[36mINFO[0m[0015] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0015] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0015] WORKDIR /usr/src/app                         
+[36mINFO[0m[0015] cmd: workdir                                 
+[36mINFO[0m[0015] Changed working directory to /usr/src/app    
+[36mINFO[0m[0015] Creating directory /usr/src/app              
+[36mINFO[0m[0015] Resolving 1 paths                            
+[36mINFO[0m[0015] Taking snapshot of files...                  
+[36mINFO[0m[0015] COPY . .                                     
+[36mINFO[0m[0015] Resolving 124 paths                          
+[36mINFO[0m[0015] Taking snapshot of files...                  
+[36mINFO[0m[0015] CMD ["npm", "start"]                         
+[36mINFO[0m[0015] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0015] Pushing layer gcr.io/nttd-platformtec/cache:acefa5e9060de9f43222acd9053001bda31ece1bdd20d44f92b045d4a91c8f2b to cache now 
+
+Showing logs for build [32mhattorihrd-node-app-master-66479-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mhattorihrd-node-app-master-66479-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/node-app to an unshallow repository
+Generating change log from git ref fefa98699a38c7e29f38b26c701c875edef114c7 => bc58e64e2c86af019f2cbc80dc49625670771493
+Associating user jenkins-x-bot in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login jenkins-x-bot-0 as emails match
+Adding label jenkins.io/git-github-userid=jenkins-x-bot-0 to user jenkins-x-bot in users.jenkins.io
+Finding issues in commit messages using git format
+WARNING: No release found for **********/node-app and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/**********/node-app/releases/tag/v0.0.1
+generated: /workspace/source/charts/node-app/templates/release.yaml
+Created Release node-app-0-0-1 resource in namespace **
+Updating PipelineActivity **********-node-app-master-1 with version 0.0.1
+Updated PipelineActivities **********-node-app-master-1 with release notes URL: https://github.com/**********/node-app/releases/tag/v0.0.1
+
+Showing logs for build [32mhattorihrd-node-app-master-66479-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file node-app-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mhattorihrd-node-app-master-66479-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app node-app version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/**********/environment-ia-**********-**-cluster-staging/pull/1
+Added label updatebot to Pull Request https://github.com/**********/environment-ia-**********-**-cluster-staging/pull/1
+WARNING: Failed to query the Pull Request last commit status for https://github.com/**********/environment-ia-**********-**-cluster-staging/pull/1 ref 54ab52583da2d51f8c4e7ebd61aef9967630b170 Could not find a status for repository **********/environment-ia-**********-**-cluster-staging with ref 54ab52583da2d51f8c4e7ebd61aef9967630b170
+WARNING: Failed to query the Pull Request last commit status for https://github.com/**********/environment-ia-**********-**-cluster-staging/pull/1 ref 54ab52583da2d51f8c4e7ebd61aef9967630b170 Could not find a status for repository **********/environment-ia-**********-**-cluster-staging with ref 54ab52583da2d51f8c4e7ebd61aef9967630b170
+WARNING: Failed to query the Pull Request last commit status for https://github.com/**********/environment-ia-**********-**-cluster-staging/pull/1 ref 54ab52583da2d51f8c4e7ebd61aef9967630b170 Could not find a status for repository **********/environment-ia-**********-**-cluster-staging with ref 54ab52583da2d51f8c4e7ebd61aef9967630b170
+Pull Request https://github.com/**********/environment-ia-**********-**-cluster-staging/pull/1 is merged at sha dc29246ffba2573a4e5bac084da18ac471f09654
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names node-app, **-node-app, **-staging-node-app
