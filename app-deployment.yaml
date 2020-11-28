@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+        app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+      - name: app
+        image: hirodevops05/app:latest
+        ports:
+        - containerPort: 8080
+
+# hirodevops04/hello-app:latest
+# gcr.io/deductive-nexus-288806/hello-app:v1
