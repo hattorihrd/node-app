@@ -17,6 +17,3 @@ spec:
         image: YOUR-RESISTORY-NAME/node-app:latest
         ports:
         - containerPort: 8080
-
-# hirodevops04/hello-app:latest
-# gcr.io/deductive-nexus-288806/hello-app:v1
