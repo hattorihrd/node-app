@@ -1,0 +1,2 @@
+# node-app
+Node.jsを使った簡単なアプリケーション。それらソースをdockerでビルドするdockerfileとk8sでデプロイするプログラム一式
